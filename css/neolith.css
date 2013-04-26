@@ -1,0 +1,189 @@
+/**
+ * The CSS file used to include neolith styles into a project
+ * @package neolith
+ * @version $Id: neolith.css 2205 2007-03-26 19:18:22Z jreed $
+ * @author NovaEdge Technologies LLC
+ * @copyright Copyright &copy; 2006-2007, NovaEdge Technologies LLC
+ * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ */
+ 
+.error {
+  color: red;
+  margin: 2.5em 1em 0 10px;
+  padding: 0 1em;
+  border: 2px solid #ff0000;
+  line-height: 34px;
+  width: 660px;
+}
+
+.error strong {
+  color: white;
+  background-color: red;
+  padding: 0.5em;
+  margin: 0 1em 0 -1em;
+}
+
+.datamenu {
+  padding: 0 10px;
+  margin: 0;
+}
+.datamenu a, .datamenu a:visited, p.datamenu {
+  float: left;
+  padding: 2px 5px;
+}
+.datamenu a:hover {
+  text-decoration: underline;
+}
+
+.stepmenu {
+  padding: 0 10px;
+  margin: 0;
+}
+.stepmenu p {
+  font-size: 12px;
+  width: 150px;
+  background-color: #aaaaaa;
+  color: #003366;
+  float: left;
+  text-align: center;
+  margin: 0 2px 0 0;
+  padding: 5px 0;
+}
+#thisstep {
+  color: #ffffff;
+  background-color: #003366;
+}
+/*table selectors*/
+table {
+  font-size: 11px;
+  padding: 0;
+  margin: 1em;
+  border-collapse: collapse;
+  line-height: 1.5em;
+}
+tr,td {
+  border-bottom: 1px solid #333333;
+  padding: 0 0.5em;
+  margin: 0;
+}
+td a {
+	display: block;
+	width: 100%;
+}
+.rowhead {
+  background-color: #383838;
+  color: #FFFFFF;
+}
+.rowhead a, .rowhead a:visited {
+  color: #FFFFFF;
+}
+.rowhead a:hover {
+  color: #383838;
+  background-color: #EEE600;
+}
+.rowhead td[onclick]:hover {
+  color: #EEE600;
+}
+.rowodd {
+  background-color: #CCE0FF;
+}
+.roweven {
+  background-color: #E2E2E2;
+}
+.rowodd:hover, .roweven:hover, td a:hover {
+  background-color: #EEE600;
+}
+.cellcenter, tr.rowodd td.cellcenter, tr.roweven td.cellcenter  {
+	text-align: center;
+}
+.cellleft, tr.rowodd td.cellleft, tr.roweven td.cellleft {
+	text-align: left;
+}
+.cellright, tr.rowodd td.cellright, tr.roweven td.cellright {
+	text-align: right;
+}
+.report {
+	text-align: right;
+}
+/*fieldset selectors*/
+.fieldgroup {
+	margin: 0;
+	padding: 0 10px;
+}
+.fieldset {
+	clear: both;
+/*	height: 30px;*/
+/*	margin: 0 0 10px 0;*/
+  border-top: 1px dotted #cccccc;
+}
+.fieldname {
+	float: left;
+	width: 120px;
+/*  background-color: #E2E2E2;*/
+	font-weight: bold;
+	text-align: right;
+/*	height: 30px;*/
+  padding: 5px 10px;
+}
+.fieldvalue {
+  float: left;
+/*  width: 500px;*/
+/*  border: 2px solid #CCE0FF;*/
+  padding: 5px 10px;
+/*  height: 26px;*/
+}
+.fieldnameempty {
+	float: left;
+	width: 120px;
+/*	height: 30px;*/
+	height: 1em;
+  padding: 5px 10px;
+}
+.fieldvalueempty {
+  float: left;
+/*  width: 500px;*/
+  padding: 5px 10px;
+}
+
+.fieldvalue em {
+  font-style: italic;
+}
+
+.fielderror {
+  color: red;
+  padding: 5px 0;
+}
+.fielderror img {
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+.fielderror p {
+  padding: 0 0 0 3px;
+  margin: 5px 0 0 0;
+  float: left;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+
+/*attribute selectors*/
+[onclick] {
+	cursor: pointer;
+}
