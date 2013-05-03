@@ -52,6 +52,13 @@ class NEPage extends NEHtmlRequestObject
     //handle the config object
     $this->setConfig($config);
 
+		//neolith ignores all URL "path" information to prevent XSS
+		if ($this->getConfig()->get('ignoreUrlPath') == true && isset($_SERVER['PATH_INFO'])) {
+			$scriptAndQuery = $_SERVER['SCRIPT_NAME'].($_SERVER['QUERY_STRING'] ? '?'.$_SERVER['QUERY_STRING'] : '');
+			header("Location: $scriptAndQuery");
+		  exit();
+		}
+  	
     //initialize the database
     if ($this->getConfig()->get('dbInUse') == true)
     {

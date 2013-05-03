@@ -70,6 +70,8 @@ class NEConfig extends NEObject
     // assume that if SSL is present that it is required
     $this->set('siteRequiresSSL', true);
 
+		//ignore URL path to prevent URI XSS/hijack
+		$this->set('ignoreUrlPath', true);
   }
   
 }
