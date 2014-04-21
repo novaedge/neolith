@@ -178,7 +178,9 @@ class NEObject
   function addDebug($debugSet)
   {
     //TODO: keep from clobbering key names that are the same
-    $this->debugSet = array_merge($debugSet);
+    if (is_array($debugSet)) {
+	    $this->debugSet = array_merge($debugSet);
+    }
   }
   
   function setVarSet(&$varSet = null)
