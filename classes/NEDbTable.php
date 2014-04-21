@@ -90,12 +90,18 @@ class NEDbTable extends NEDb
 		foreach ($this->columns as $key) 
 		{
 			$value = $row[$key];
-      //test if magic quotes are on, which requires to stripslashes()
-      if (get_magic_quotes_gpc())
-      {
-        $value = stripslashes($value);
-      }
-      $string .= "'".mysql_real_escape_string($value)."',";
+			if ($value)
+			{
+				if (get_magic_quotes_gpc())
+				{
+					$value = stripslashes($value);
+				}
+				$string .= "'".mysql_real_escape_string($value)."',";
+			}
+			else
+			{
+				$string .= "null,";
+			}
 		}
 		return rtrim($string, ',');
   }
