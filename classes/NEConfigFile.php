@@ -11,7 +11,7 @@ class NEConfigFile extends NEConfig
     parent::__construct();
     
     //set the global path of all config files
-    $this->configPath = preg_replace(':/htdocs:','', "{$_SERVER['DOCUMENT_ROOT']}/config/");
+    $this->configPath = preg_replace(':/htdocs:','', "{$_SERVER['DOCUMENT_ROOT']}/");
     
     //assume the hostname if there is no specific file passed
     if (is_null($configFile))
